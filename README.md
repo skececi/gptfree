@@ -18,6 +18,8 @@ I find a lot of value in **Project Starter Kits**. These are usually GitHub repo
 
 Suffice it to say: The goal of this repo is to drive the cost of creating a basic chatbot to zero. You can create a GPT wrapper in ~10 minutes using this repo. Or integrate it into your existing application. Since this is free + MIT licensed— the cost to create a GPT wrapper is now zero. Fork it, host it and charge money, or just copy/paste the code.
 
+This pales in comparison to the immense work of true open source mega-projects. But it's a product domain I know, and one that has seen an immense amount of duplicated work across so many iterations.
+
 Surely this means no one will ever have to do this again ;\) — cue XKCD: https://xkcd.com/927
 
 # Using + Integrating
@@ -40,7 +42,7 @@ Surely this means no one will ever have to do this again ;\) — cue XKCD: http
 
 
 # Notes
-* Directly calling the API is generally much cheaper than paying $20/month. 
+* Directly calling the API is generally much cheaper than paying \$ 20/month. Use this as your personal LLM client and save money, or host it and make money.
 * CSS wise, I use tailwind and have copied a familiar UI. Customize to your liking.
 * Persistence is done via localstorage. You might want to swap this out for account-based DB storage, but since my goal is cleaner integration into your existing system, I am leaving this as an exercise for the implementer.
 * Hosting is up to you. If that's a barrier, consider this a good time to learn about hosting simple frontends and backends! I like Vercel and Railway.
