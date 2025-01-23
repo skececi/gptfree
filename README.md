@@ -1,5 +1,5 @@
 # What + Why
-The cost of making a GPT wrapper just dropped to zero.
+Building or integrating an LLM wrapper shouldn't take more than 10 minutes.
 
 You've heard the following thesis echoed everywhere: “The cost of software is trending to zero.” And then, a subset of that: “GPT Wrappers are adding 0 value”.
 
