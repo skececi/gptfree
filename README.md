@@ -22,6 +22,13 @@ This pales in comparison to the immense work of true open source mega-projects. 
 
 Surely this means no one will ever have to do this again ;\) — cue XKCD: https://xkcd.com/927
 
+---
+
+https://github.com/user-attachments/assets/010448dd-7074-46b8-bb4b-5b422037b5e2
+
+---
+
+
 # Using + Integrating
 ## Pre-reqs
 - `uv` package manager (install with `curl -LsSf https://astral.sh/uv/install.sh | sh`)
