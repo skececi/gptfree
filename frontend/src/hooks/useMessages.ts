@@ -26,9 +26,9 @@ export function useMessages() {
           content: data.content,
           model: selectedModel
         })
+        setIsLoading(false)
 
         if (threads[activeThreadId].title === "New Chat") {
-          updateThread(activeThreadId, { title: "GETTING TITLE..." })
           const { data: nameData, error: nameError } = await api.nameThread([
             ...currentMessages, 
             userMsg, 
@@ -44,8 +44,6 @@ export function useMessages() {
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred')
       console.error('Error:', err)
-    } finally {
-      setIsLoading(false)
     }
   }
 

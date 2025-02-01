@@ -17,11 +17,14 @@ export function Message({ message }: MessageProps) {
       }`}
     >
       <div
-        className={`rounded-3xl px-5 py-2.5 ${
-          message.role === 'assistant'
-            ? 'w-full text-[#0D0D0D] prose max-w-none'
-            : 'w-fit bg-[#F3F3F3] text-[#0D0D0D]'
-        }`}
+        className={`
+          rounded-3xl px-5 py-2.5 
+          ${
+            message.role === 'assistant'
+              ? 'w-full text-[#0D0D0D] prose max-w-none break-words whitespace-pre-wrap leading-normal [&_pre]:overflow-x-auto [&_pre]:max-w-full [&_pre]:whitespace-pre-wrap [&_pre]:break-words [&_code]:whitespace-pre-wrap [&_p]:my-0 [&_p]:leading-normal'
+              : 'w-fit bg-[#F3F3F3] text-[#0D0D0D] break-words whitespace-pre-wrap'
+          }
+        `}
       >
         {message.role === 'assistant' ? (
           <>

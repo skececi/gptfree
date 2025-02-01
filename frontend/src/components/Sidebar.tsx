@@ -1,7 +1,7 @@
 import { useThread } from '../state/ThreadContext'
 
 export function Sidebar() {
-  const { threads, activeThreadId, createThread, selectThread } = useThread()
+  const { threads, activeThreadId, createThread, selectThread, deleteThread } = useThread()
 
   return (
     <div className="w-[260px] bg-[#F9F9F9] border-r border-black/10 flex flex-col h-screen">
@@ -19,13 +19,24 @@ export function Sidebar() {
             key={id}
             onClick={() => selectThread(id)}
             className={`
-              p-3 mb-0.5 rounded-lg cursor-pointer 
-              text-[#374151] text-sm truncate
+              group p-3 mb-0.5 rounded-lg cursor-pointer 
+              text-[#374151] text-sm 
               hover:bg-[#f3f4f6] transition-colors
+              flex items-center justify-between
               ${id === activeThreadId ? 'bg-[#e5e7eb]' : ''}
             `}
           >
-            {thread.title}
+            <span className="flex-1 truncate pr-2">{thread.title}</span>
+            
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                deleteThread(id)
+              }}
+              className="opacity-0 group-hover:opacity-100 text-red-600 hover:text-red-800 ml-2 transition-opacity"
+            >
+              ✕
+            </button>
           </div>
         ))}
       </div>
